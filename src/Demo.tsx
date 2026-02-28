@@ -263,7 +263,7 @@ export default function Demo() {
                                 Inspect the ABS Bottom Enclosure (PA-004) for any molding defects. Align the Aluminum Top Plate (PA-005) with the mounting standoffs. Ensure correct orientation using the USB-C port cutout.
                               </p>
                               <div className="aspect-video w-full rounded-lg overflow-hidden border border-white/10 bg-slate-950/50 flex items-center justify-center">
-                                <img src="/images/macropad_cad.png" alt="CAD View" className="object-cover w-full h-full opacity-90 hover:opacity-100 transition-opacity" />
+                                <img src={`${import.meta.env.BASE_URL}images/macropad_cad.png`} alt="CAD View" className="object-cover w-full h-full opacity-90 hover:opacity-100 transition-opacity" />
                               </div>
                             </div>
                           </div>
@@ -279,7 +279,7 @@ export default function Demo() {
                                 Snap the 4x Mechanical Switches (PA-002) firmly into the Top Plate. Align the pins with the hot-swap sockets on the PCB (PA-001) and press down evenly. Do not bend pins.
                               </p>
                               <div className="aspect-video w-full rounded-lg overflow-hidden border border-white/10 bg-slate-950/50 flex items-center justify-center">
-                                <img src="/images/macropad_step_cad.png" alt="Step View" className="object-cover w-full h-full opacity-90 hover:opacity-100 transition-opacity" />
+                                <img src={`${import.meta.env.BASE_URL}images/macropad_step_cad.png`} alt="Step View" className="object-cover w-full h-full opacity-90 hover:opacity-100 transition-opacity" />
                               </div>
                             </div>
                           </div>
