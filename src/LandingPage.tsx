@@ -292,16 +292,14 @@ export default function LandingPage() {
 
             {/* Contact CTA */}
             <section id="contact" className="py-28">
-                <div className="max-w-6xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
-                    <div>
-                        <h2 className="text-4xl font-extrabold tracking-tight mb-5">Let's visit your restaurant.</h2>
-                        <p className="text-slate-400 leading-relaxed mb-8">
-                            We work exclusively with restaurants in D.C., Maryland, and Virginia. Reach out and we'll schedule a free walkthrough — no pitch decks, no pressure.
-                        </p>
-                        <div className="flex items-center gap-3 text-slate-300">
-                            <Phone className="w-4 h-4 text-orange-500" />
-                            <span className="text-sm">We'll call you back within one business day.</span>
-                        </div>
+                <div className="max-w-4xl mx-auto px-6 flex flex-col items-center text-center">
+                    <h2 className="text-4xl font-extrabold tracking-tight mb-5">Let's visit your restaurant.</h2>
+                    <p className="text-slate-400 leading-relaxed mb-8">
+                        We work exclusively with restaurants in D.C., Maryland, and Virginia. Reach out and we'll schedule a free walkthrough — no pitch decks, no pressure.
+                    </p>
+                    <div className="flex items-center justify-center gap-3 text-slate-300 mb-16">
+                        <Phone className="w-4 h-4 text-orange-500" />
+                        <span className="text-sm">We'll call you back within one business day.</span>
                     </div>
 
                     <ContactForm />
