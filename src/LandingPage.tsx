@@ -1,5 +1,5 @@
-import React, { useEffect, useRef, useState } from 'react';
-import { ArrowRight, CheckCircle2, MapPin, Phone, TrendingDown, Clock, Shield, ChevronRight } from 'lucide-react';
+import { useEffect, useState } from 'react';
+import { ArrowRight, CheckCircle2, MapPin, Phone, TrendingDown, Clock, Shield } from 'lucide-react';
 
 const NAV = '#080f1a';
 const BG = '#080f1a';
@@ -320,62 +320,19 @@ export default function LandingPage() {
 }
 
 function ContactForm() {
-    const [status, setStatus] = useState<'idle' | 'sent'>('idle');
-    const formRef = useRef<HTMLFormElement>(null);
-
-    const handleSubmit = (e: React.FormEvent) => {
-        e.preventDefault();
-        setStatus('sent');
-    };
-
-    if (status === 'sent') {
-        return (
-            <div className="flex flex-col items-center justify-center p-10 rounded-2xl text-center" style={{ backgroundColor: CARD, border: `1px solid ${BORDER}` }}>
-                <CheckCircle2 className="w-12 h-12 mb-4" style={{ color: ORANGE }} />
-                <p className="text-xl font-bold mb-2">We'll be in touch soon.</p>
-                <p className="text-slate-400 text-sm">Expect a call or email within one business day.</p>
-            </div>
-        );
-    }
-
     return (
-        <form ref={formRef} onSubmit={handleSubmit} className="p-7 rounded-2xl space-y-4" style={{ backgroundColor: CARD, border: `1px solid ${BORDER}` }}>
-            <div className="grid sm:grid-cols-2 gap-4">
-                <div>
-                    <label className="block text-xs font-medium text-slate-400 mb-1.5">Your name</label>
-                    <input required type="text" placeholder="Jane Smith" className="w-full px-4 py-2.5 rounded-lg text-sm text-white placeholder-slate-600 focus:outline-none transition-colors"
-                        style={{ backgroundColor: 'rgba(26,51,88,0.5)', border: `1px solid ${BORDER}` }}
-                        onFocus={e => (e.currentTarget.style.borderColor = ORANGE)}
-                        onBlur={e => (e.currentTarget.style.borderColor = BORDER)} />
-                </div>
-                <div>
-                    <label className="block text-xs font-medium text-slate-400 mb-1.5">Phone or email</label>
-                    <input required type="text" placeholder="(202) 555-0100" className="w-full px-4 py-2.5 rounded-lg text-sm text-white placeholder-slate-600 focus:outline-none transition-colors"
-                        style={{ backgroundColor: 'rgba(26,51,88,0.5)', border: `1px solid ${BORDER}` }}
-                        onFocus={e => (e.currentTarget.style.borderColor = ORANGE)}
-                        onBlur={e => (e.currentTarget.style.borderColor = BORDER)} />
-                </div>
-            </div>
-            <div>
-                <label className="block text-xs font-medium text-slate-400 mb-1.5">Restaurant name & location</label>
-                <input required type="text" placeholder="Joe's Burgers — Capitol Hill, D.C." className="w-full px-4 py-2.5 rounded-lg text-sm text-white placeholder-slate-600 focus:outline-none transition-colors"
-                    style={{ backgroundColor: 'rgba(26,51,88,0.5)', border: `1px solid ${BORDER}` }}
-                    onFocus={e => (e.currentTarget.style.borderColor = ORANGE)}
-                    onBlur={e => (e.currentTarget.style.borderColor = BORDER)} />
-            </div>
-            <div>
-                <label className="block text-xs font-medium text-slate-400 mb-1.5">Biggest operational headache (optional)</label>
-                <textarea rows={3} placeholder="e.g. fryer coverage during lunch rush, dishwashing..." className="w-full px-4 py-2.5 rounded-lg text-sm text-white placeholder-slate-600 focus:outline-none transition-colors resize-none"
-                    style={{ backgroundColor: 'rgba(26,51,88,0.5)', border: `1px solid ${BORDER}` }}
-                    onFocus={e => (e.currentTarget.style.borderColor = ORANGE)}
-                    onBlur={e => (e.currentTarget.style.borderColor = BORDER)} />
-            </div>
-            <button type="submit" className="w-full flex items-center justify-center gap-2 text-white font-semibold py-3 rounded-lg transition-colors"
-                style={{ backgroundColor: ORANGE }}
-                onMouseEnter={e => (e.currentTarget.style.backgroundColor = '#c2410c')}
-                onMouseLeave={e => (e.currentTarget.style.backgroundColor = ORANGE)}>
-                Request a Free Site Visit <ChevronRight className="w-4 h-4" />
-            </button>
-        </form>
+        <div className="flex justify-center w-full">
+            <iframe
+                src="https://docs.google.com/forms/d/e/1FAIpQLSee0kd-KKbIOAaL8ggFfU0cPS80b69vWSVJYXDH6EOcW1ODhA/viewform?embedded=true"
+                width="640"
+                height="2671"
+                frameBorder="0"
+                marginHeight={0}
+                marginWidth={0}
+                className="w-full max-w-[640px]"
+            >
+                Loading…
+            </iframe>
+        </div>
     );
 }
