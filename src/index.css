@@ -7,3 +7,24 @@
     scroll-behavior: smooth;
   }
 }
+
+@layer utilities {
+  .lovable-gradient {
+    /* More accurate Lovable gradient: white top blending into deep blue, soft pink, and orange at bottom */
+    background:
+      radial-gradient(circle at 50% 10%, #ffffff 0%, #ffffff 20%, transparent 60%),
+      radial-gradient(circle at 20% 40%, rgba(59, 130, 246, 0.8) 0%, transparent 50%),
+      radial-gradient(circle at 80% 40%, rgba(99, 102, 241, 0.8) 0%, transparent 50%),
+      radial-gradient(circle at 50% 70%, rgba(236, 72, 153, 0.9) 0%, transparent 60%),
+      radial-gradient(circle at 20% 95%, rgba(249, 115, 22, 1) 0%, transparent 60%),
+      radial-gradient(circle at 80% 95%, rgba(239, 68, 68, 0.9) 0%, transparent 60%);
+    background-color: #e0e7ff; /* Fallback base matching light blue tint */
+    background-size: 100% 100%;
+  }
+
+  @keyframes gradient-shift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+}
